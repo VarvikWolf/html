@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+	<!-- Bootstrap сетка -->
+	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+	<!-- Стили сайта -->
+	<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+ <nav class="navbar">
+  <div class="container">
+<a href="#" class="navbar-brand" onclick="showHeader()">   WarvikSongS</a>
+<div class="navbar-wrap">
+  <ul class="navbar-menu">
+    <li><a href="index.html">  Home</a></li>
+    <li><a href="Photo.html">   Photo</a></li>
+    <li class="active"><a  href="Top_Mangs.html">Top Mangs</a></li>
+    <li><a href="My_playlist.html">My playlist</a></li>
+    <li><a href="Best_Anime.html">Best Anime</a></li>
+  </ul>
+</div>
+<a href="https://vk.com/id187333757" class="callback">Связь со мной</a>
+  </div>
+ </nav>
+<div class="first" 
+ >
+
+</div>
+<div class="message"  style="border: 18px">
+  <div style="width: 20px; line-height: 3;">
+    <div class="out"> Here </div>
+  </div>
+  
+</div>
+<input type="text" class="txt" style="margin-top: 1100px; margin-left: 10px;" >
+<button  onclick="bt(); document.querySelector('.txt').value = ''" class="submit" style="z-index: -1;
+top:1100px;
+left: 190px;"> Sent</button>
+<button  onclick="clear1()" class="submit1" style="z-index: -1;
+top:1100px;
+left: 230px;"> del</button>
+
+</body>
+
+</html>
+<script>
+    let g = 'enter:', u ;
+    let j="";
+    let k = 0;
+  function bt()
+  {
+  u = "bh"
+    let a = document.querySelector('.txt').value;
+    j=  document.querySelector('.out').innerHTML += a + '\n' ;
+    localStorage.setItem('text', j.toString())
+ 
+   g = localStorage.getItem('text')
+  
+
+  }
+
+  g = localStorage.getItem('text')
+  if(u = "bh"){
+    document.querySelector('.out').innerHTML = g + '\n' ;
+  }
+   function clear1()
+   {
+    localStorage.clear();
+    document.querySelector('.out').innerHTML ="Enter:\r\n" ;
+   
+   }
+  function showHeader() {
+    
+    while (window.pageYOffset > 10) 
+    {
+      pageYOffset -=1;
+    }
+  }
+
+</script>
